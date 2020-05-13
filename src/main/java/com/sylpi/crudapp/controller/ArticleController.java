@@ -20,7 +20,7 @@ public class ArticleController {
         articleService = theArticleService;
     }
 
-    @GetMapping("/list")
+    @GetMapping("/admin")
     public String allArticles(Model model) {
 
         // get articles from DB with findAll from service
@@ -28,7 +28,7 @@ public class ArticleController {
         model.addAttribute("articles", allArticles);
 
         // return html page that displays articles
-        return "articles/list-articles";
+        return "admin/list-articles";
     }
 
     @GetMapping("/home")
@@ -75,7 +75,7 @@ public class ArticleController {
         Article theArticle = new Article();
         theModel.addAttribute("article", theArticle);
 
-        return "articles/article-form";
+        return "admin/article-form";
     }
 
     @GetMapping("/showFormForUpdate")
@@ -86,7 +86,7 @@ public class ArticleController {
         // set article as a model to pre-populate the form
         theModel.addAttribute("article", theArticle);
 
-        return "articles/article-form";
+        return "admin/article-form";
     }
 
     @PostMapping("/save")
@@ -95,7 +95,7 @@ public class ArticleController {
         articleService.save(theArticle);
 
         // redirect to list
-        return "redirect:/list";
+        return "redirect:/admin";
     }
 
     @GetMapping("/delete")
@@ -105,7 +105,7 @@ public class ArticleController {
         articleService.deleteById(theId);
 
         // redirect to employees/list
-        return "redirect:/list";
+        return "redirect:/admin";
     }
 
     @GetMapping("/articles/{theId}")
