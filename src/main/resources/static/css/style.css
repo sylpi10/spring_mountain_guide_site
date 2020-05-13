@@ -1,6 +1,20 @@
 body{
-    background-color: lightblue;
+   margin:0;padding:0;
+   box-sizing: border-box;
+   background-color: #e9f5f8;
 }
 .container{
     margin-top: 30px;
+}
+
+.container{
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+
+nav ul {
+    width:74%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
 }
