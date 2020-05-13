@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <div th:replace="fragments/header :: myHeader"></div>
+    <title>Actus</title>
+</head>
+<body>
+<header>
+    <div th:replace="fragments/header :: menu"></div>
+</header>
+
+
+<div class="container mb-5 mt-5 text-center" th:each="tempArticle : ${articles}">
+    <h1 th:text="${tempArticle.category}"/>
+    <h2 th:text="${tempArticle.title}"/>
+    <p th:text="${tempArticle.content}"/>
+    <img th:src="${tempArticle.picture}" alt="pic" width="420">
+</div>
+
+<div th:replace="fragments/footer :: foot"></div>
+</body>
+</html>

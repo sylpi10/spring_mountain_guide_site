@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Articles</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Add an article</h1>
+        <hr>
+        <form th:action="@{/save}"
+              th:object="${article}" method="post">
+
+<!--            add hidden form field to handle update-->
+            <input type="hidden" th:field="*{id}">
+
+            <input type="text" th:field="*{category}" class="form-control mb-2 w-50" placeholder="Category">
+            <input type="text" th:field="*{title}" class="form-control mb-2 w-50" placeholder="Title">
+            <textarea type="text" th:field="*{content}" class="form-control mb-2 w-50" placeholder="Content"></textarea>
+            <input type="text" th:field="*{picture}" class="form-control mb-2 w-50" placeholder="Image">
+<!--            <input type="file" th:field="*{picture}" class="form-control mb-2 w-50" placeholder="Image" name="imagefile">-->
+
+
+            <button type="submit" class="btn btn-info">Save</button>
+        </form>
+        <hr>
+        <a th:href="@{/list}">Back to Articles list</a>
+    </div>
+</body>
+</html>

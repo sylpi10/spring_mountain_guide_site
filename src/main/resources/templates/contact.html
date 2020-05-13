@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: myHeader"></div>
+    <title>Contact</title>
+</head>
+<body>
+<header>
+    <div th:replace="fragments/header :: menu"></div>
+</header>
+<div class="container text-center">
+    <h1>Contact me !!!</h1>
+    <form action="#">
+        <input type="text" placeholder="Your Name">
+        <input type="text" placeholder="Your Mail">
+        <textarea type="text" placeholder="Your Message"></textarea>
+    </form>
+</div>
+
+<div th:replace="fragments/footer :: foot"></div>
+</body>
+</html>

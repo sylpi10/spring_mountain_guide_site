@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: myHeader"></div>
+    <title>Stages</title>
+</head>
+<body>
+<header>
+    <div th:replace="fragments/header :: menu"></div>
+</header>
+<div class="container text-center">
+    <h1>Training offer</h1>
+    <div class="training-wrapper d-flex flex-wrap">
+        <div class="summer m-2">
+            <a th:href="@{/summer}">
+                <h1>Summer</h1>
+                <img th:src="@{img/summer.jpg}" width="500" height="300" alt="">
+            </a>
+        </div>
+        <div class="winter m-2">
+            <a href="/trainings/summer.html">
+                <h1>Winter</h1>
+                <img th:src="@{img/winter.jpg}" width="500" height="300" alt="">
+            </a>
+        </div>
+        <div class="spring m-2">
+            <a href="trainings/summer.html">
+                <h1>Spring</h1>
+                <img th:src="@{img/spring.jpg}" width="500" height="300" alt="">
+            </a>
+        </div>
+        <div class="autumn m-2">
+            <a href="/trainings/summer.html">
+                <h1>Autumn</h1>
+                <img th:src="@{img/autumn.jpg}" width="500" height="300" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: foot"></div>
+</body>
+</html>
