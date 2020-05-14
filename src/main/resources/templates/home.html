@@ -9,34 +9,29 @@
 <header>
     <div th:replace="fragments/header :: menu"></div>
 </header>
-    <div class="container text-center">
+    <div class="text-center home-container">
 
         <h1>Amazing Mountain Guide</h1>
 
-
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-            </ol>
+
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img th:src="@{img/hero.jpg}" class="d-block w-100" alt="..." width="1000" height="500">
+                    <img th:src="@{img/hero.jpg}" class="d-block w-100" alt="..." width="1000" height="600">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>First slide label</h3>
                         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img th:src="@{img/hero2.jpg}" class="d-block w-100" alt="..." width="1000" height="500">
+                    <img th:src="@{img/hero2.jpg}" class="d-block w-100" alt="..." width="1000" height="600">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Second slide label</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img th:src="@{img/hero3.jpg}"  class="d-block w-100" alt="..." width="1000" height="500">
+                    <img th:src="@{img/hero3.jpg}"  class="d-block w-100" alt="..." width="1000" height="600">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Third slide label</h3>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -52,6 +47,12 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+
+        <p class="mt-5 p-5 text-secondary">Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat,
+            cum et ego essem una et pauci admodum familiares, in eum sermonem illum incidere qui tum forte multis erat in ore.
+            Meministi enim profecto, Attice, et eo magis, quod P. Sulpicio utebare multum, cum is tribunus plebis capitali odio a
+            Q. Pompeio, qui tum erat consul, dissideret,
+            quocum coniunctissime et amantissime vixerat, quanta esset hominum vel admiratio vel querella.</p>
     </div>
 
 <!--    footer-->
