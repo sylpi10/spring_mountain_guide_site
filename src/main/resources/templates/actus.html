@@ -13,10 +13,12 @@
 
 <div class="container text-center">
      <article class="article" th:each="tempArticle : ${articles}">
-        <h1 th:text="${tempArticle.category}"/>
-        <h2 th:text="${tempArticle.title}"/>
-        <p th:text="${tempArticle.content}"/>
-        <img th:src="${tempArticle.picture}" alt="pic" width="420">
+        <h1 th:text="${tempArticle.category}"></h1>
+        <h2 th:text="${tempArticle.title}"></h2>
+        <p th:text="${tempArticle.content}"></p>
+<!--        <img th:src="${tempArticle.picture}" alt="pic" width="420">-->
+         <img th:src="@{/photos/article/} + ${tempArticle.id} + .jpg" alt="picture" width="420">
+         <hr>
      </article>
 </div>
 

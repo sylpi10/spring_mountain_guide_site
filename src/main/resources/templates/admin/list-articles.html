@@ -8,9 +8,12 @@
 
 </head>
 <body>
+    <header>
+        <h3 class="m-4">Admin Space</h3>
+    </header>
     <div class="container">
         <h1>Articles (actu/news) </h1>
-        <h2>Admin Space</h2>
+
         <hr>
 
         <!-- add an article-->
@@ -28,11 +31,12 @@
             </thead>
             <tbody>
             <tr th:each="tempArticle : ${articles}">
-                <td th:text="${tempArticle.category}"></td>
+                <td th:text="${tempArticle.id}"></td>
                 <td th:text="${tempArticle.title}"></td>
                 <td th:text="${tempArticle.content}"></td>
                 <td>
-                    <img th:src="${tempArticle.picture}" alt="pic" width="120">
+                    <!--<img th:src="${tempArticle.picture}" alt="pic" width="120">-->
+                    <img th:src="@{/photos/article/} + ${tempArticle.id} + .jpg" alt="pic" width="170">
                 </td>
                 <td><a th:href="@{/showFormForUpdate(articleId=${tempArticle.id})}" class="btn btn-primary">Update</a> </td>
                 <td><a th:href="@{/delete(articleId=${tempArticle.id})}" class="btn btn-danger"

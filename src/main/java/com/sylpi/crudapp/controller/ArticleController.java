@@ -6,7 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 @Controller
@@ -30,6 +38,25 @@ public class ArticleController {
         // return html page that displays articles
         return "admin/list-articles";
     }
+
+//    @PostMapping("/upload") // //new annotation since 4.3
+//    public String upload(Model model, @RequestParam("files") MultipartFile[] files) {
+//        StringBuilder fileNames = new StringBuilder();
+//            for (MultipartFile file : files){
+//                Path fileNameAndPath = Paths.get(uploadDirectory, file.getOriginalFilename());
+//                fileNames.append(file.getOriginalFilename());
+//                try {
+//                    Files.write(fileNameAndPath, file.getBytes());
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        model.addAttribute("msg", "upload success : " + fileNames.toString().concat(", ") + ", " + uploadDirectory.toString());
+//
+//        return "uploadview";
+//    }
+
+
 
     @GetMapping("/home")
     public String home(){
@@ -91,8 +118,37 @@ public class ArticleController {
 
     @PostMapping("/save")
     public String saveArticle(@ModelAttribute("article") Article theArticle){
+
+//        String uploadDirectory =  System.getProperty("user.dir") + "/uploads";
+//            StringBuilder fileNames = new StringBuilder();
+//            for (MultipartFile file : files){
+//                Path fileNameAndPath = Paths.get(uploadDirectory, file.getOriginalFilename());
+//                fileNames.append(file.getOriginalFilename());
+//                theArticle.setPicture(files);
+//
+//                try {
+//                    Files.write(fileNameAndPath, file.getBytes());
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//            model.addAttribute("msg", "upload success : " + fileNames.toString().concat(", ") + ", " + uploadDirectory);
+
+
         // save the article
         articleService.save(theArticle);
+
+        MultipartFile articleImage = theArticle.getPicture();
+        try {
+            byte[] bytes = articleImage.getBytes();
+            String imageName = theArticle.getId()+".jpg";
+            BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File("src/main/resources/static/photos/article/"+imageName)));
+            stream.write(bytes);
+            stream.close();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
 
         // redirect to list
         return "redirect:/admin";

@@ -1,5 +1,7 @@
 package com.sylpi.crudapp.entity;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
 
 @Entity
@@ -17,12 +19,13 @@ public class Article {
     @Column(name = "content")
     private String content;
     @Column(name = "picture")
-    private String picture;
+    @Transient
+    private MultipartFile picture;
 
     public Article() {
     }
 
-    public Article(int id, String category, String title, String content, String picture) {
+    public Article(int id, String category, String title, String content, MultipartFile picture) {
         this.id = id;
         this.category = category;
         this.title = title;
@@ -62,11 +65,11 @@ public class Article {
         this.content = content;
     }
 
-    public String getPicture() {
+    public MultipartFile getPicture() {
         return picture;
     }
 
-    public void setPicture(String picture) {
+    public void setPicture(MultipartFile picture) {
         this.picture = picture;
     }
 }

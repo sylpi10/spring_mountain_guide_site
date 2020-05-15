@@ -12,7 +12,7 @@
         <h1>Add an article</h1>
         <hr>
         <form th:action="@{/save}"
-              th:object="${article}" method="post">
+              th:object="${article}" method="post", enctype="multipart/form-data">
 
 <!--            add hidden form field to handle update-->
             <input type="hidden" th:field="*{id}">
@@ -20,12 +20,17 @@
             <input type="text" th:field="*{category}" class="form-control mb-2 w-50" placeholder="Category">
             <input type="text" th:field="*{title}" class="form-control mb-2 w-50" placeholder="Title">
             <textarea type="text" th:field="*{content}" class="form-control mb-2 w-50" placeholder="Content"></textarea>
-            <input type="text" th:field="*{picture}" class="form-control mb-2 w-50" placeholder="Image">
-<!--            <input type="file" th:field="*{picture}" class="form-control mb-2 w-50" placeholder="Image" name="imagefile">-->
-
+           <!-- <input type="text" th:field="*{picture}" class="form-control mb-2 w-50" placeholder="Image">-->
+             <input type="file" th:field="*{picture}" name="files" class="form-control mb-2 w-50" multiple>
 
             <button type="submit" class="btn btn-info">Save</button>
         </form>
+
+        <!--<form method="POST" action="/upload" enctype="multipart/form-data">
+            <input type="file" name="files" multiple/><br/><br/>
+            <input type="submit" value="Submit files" />
+        </form> -->
+
         <hr>
         <a th:href="@{/admin}">Back to Articles list</a>
     </div>
