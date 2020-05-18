@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: myHeader"></div>
+    <title>Contact</title>
+</head>
+<body>
+<header>
+    <div th:replace="fragments/header :: menu"></div>
+</header>
+<div class="container text-center">
+    <h1>Contact me !!!</h1>
+    <form class="was-validated">
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationDefault01">First name</label>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationDefault02">Last name</label>
+                <input type="email" class="form-control" id="validationDefault02" placeholder="Your Mail" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="validationTextarea">Textarea</label>
+            <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Your message" required></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+</div>
+
+<div th:replace="fragments/footer :: foot"></div>
+</body>
+</html>
