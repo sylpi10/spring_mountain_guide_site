@@ -4,14 +4,47 @@ body{
    background-color: #e9f5f8;
 }
 
+@font-face {
+    font-family: "Vtks Escape";
+    src: url("../fonts/escape.Escape.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Beantown";
+    src: url("../fonts/beantown.Beantown.ttf") format("truetype");
+}
+
+.home-body{
+    background: url("../img/back2.JPG") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    margin-top:-80px;
+}
+.home-body nav ul li a{
+    color: #fff;
+}
 .home-container{
-    width: 70%;
+    width: 94%;
     margin: auto;
 }
 
-.container, .home-container{
+.home-container>h1{
+    padding-top: 220px;
+    color:#fff;
+    font-family: "Vtks Escape";
+    text-transform: uppercase;
+}
+.home-container>h2{
+    font-size: 1.6rem;
+    color:#fff;
+}
+.container, .home-container, .album-container{
     margin-top: 80px;
     margin-bottom: 120px;
+}
+.album-container{
+    width: 80%;
+    margin: auto;
 }
 .photos-container{
     display: flex;
@@ -24,6 +57,7 @@ body{
     margin:auto;
     padding: 10px;
 }
+
 nav ul {
     width:74%;
     margin: auto;
@@ -31,8 +65,12 @@ nav ul {
     justify-content: space-around;
 }
 
+footer{
+    margin-top: 60vh;
+}
 
-/*sliders*/
+/*
+/*sliders
 .slider01-act{
     width: 300px;
     border: solid 1px #ccc;
@@ -62,4 +100,4 @@ nav ul {
 .close-slider:hover{
     cursor: pointer;
     color: red;
-}
+}*/
