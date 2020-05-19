@@ -6,7 +6,7 @@ body{
 
 @font-face {
     font-family: "Vtks Escape";
-    src: url("../fonts/escape.Escape.ttf") format("truetype");
+    src: url("/fonts/escape.Escape.ttf") format("truetype");
 }
 
 @font-face {
@@ -15,7 +15,7 @@ body{
 }
 
 .home-body{
-    background: url("../img/back2.JPG") no-repeat center;
+    background: url("img/back2.JPG") no-repeat center;
     background-size: cover;
     height: 100vh;
     margin-top:-80px;
