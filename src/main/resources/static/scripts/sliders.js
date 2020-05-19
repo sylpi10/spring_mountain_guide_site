@@ -4,6 +4,7 @@ let close = document.querySelector(".close-slider");
 
 activator.addEventListener("click", function (e){
        slider.style.display = "block";
+       slider.style.border = "solid red";
        activator.style.display = "none";
 });
 
