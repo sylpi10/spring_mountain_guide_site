@@ -56,6 +56,10 @@ public class ArticleController {
 
 
 
+    @GetMapping("/")
+    public String emptyhome(){
+        return "home";
+    }
     @GetMapping("/home")
     public String home(){
         return "home";
