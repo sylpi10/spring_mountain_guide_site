@@ -5,23 +5,40 @@ body{
 }
 
 @font-face {
-    font-family: "Vtks Escape";
-    src: url("/fonts/escape.Escape.ttf") format("truetype");
+    font-family:'Escape';
+    src: local('Vtks Escape'),
+     url('../fonts/escape/Escape.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+}
+@font-face {
+    font-family:'Snowby';
+    src: local('Snowby'),
+     url('../fonts/snowby/SnowTraces.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
 }
 
 @font-face {
     font-family: "Beantown";
-    src: url("../fonts/beantown.Beantown.ttf") format("truetype");
+    src: url("../fonts/beantown/Beantown.ttf") format("truetype");
+     font-weight: normal;
+     font-style: normal;
 }
 
+
 .home-body{
-    background: url("img/back2.JPG") no-repeat center;
+    background: url("../img/back2.jpg") no-repeat center;
+    background-attachment: fixed;
     background-size: cover;
     height: 100vh;
     margin-top:-80px;
 }
 .home-body nav ul li a{
     color: #fff;
+}
+.home-body nav ul li a:hover{
+    color: #aaa;
 }
 .home-container{
     width: 94%;
@@ -31,8 +48,10 @@ body{
 .home-container>h1{
     padding-top: 220px;
     color:#fff;
-    font-family: "Vtks Escape";
+    font-family: Snowby;
     text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 4.5rem;
 }
 .home-container>h2{
     font-size: 1.6rem;
@@ -66,7 +85,7 @@ nav ul {
 }
 
 footer{
-    margin-top: 60vh;
+    margin-top: 50vh;
 }
 
 /*
