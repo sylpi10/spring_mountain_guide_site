@@ -14,12 +14,12 @@ public class LoginController {
 
     }
 
-//    @GetMapping("/authenticateTheUser")
-//    public String authenticate() {
-//
-//        return "redirect:/admin/list";
-//
-//    }
+    @GetMapping("/authenticateTheUser")
+    public String authenticate() {
+
+        return "redirect:/admin/list";
+
+    }
 
     // add request mapping for /access-denied
 
