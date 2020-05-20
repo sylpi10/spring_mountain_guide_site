@@ -11,7 +11,7 @@
     <div class="container">
         <h1>Add an article</h1>
         <hr>
-        <form th:action="@{/save}"
+        <form th:action="@{/admin/save}"
               th:object="${article}" method="post", enctype="multipart/form-data">
 
 <!--            add hidden form field to handle update-->
@@ -32,7 +32,7 @@
         </form> -->
 
         <hr>
-        <a th:href="@{/admin}">Back to Articles list</a>
+        <a th:href="@{/admin/list}">Back to Articles list</a>
     </div>
 </body>
 </html>

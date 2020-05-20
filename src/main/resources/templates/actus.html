@@ -1,4 +1,4 @@
-<!doctype html>
+<!Doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 
@@ -13,7 +13,7 @@
 
 <div class="container text-center">
      <article class="article" th:each="tempArticle : ${articles}">
-        <h1 th:text="${tempArticle.category}"></h1>
+<!--        <h1 th:text="${tempArticle.category}"></h1>-->
         <h2 th:text="${tempArticle.title}"></h2>
         <p th:text="${tempArticle.content}"></p>
 <!--        <img th:src="${tempArticle.picture}" alt="pic" width="420">-->

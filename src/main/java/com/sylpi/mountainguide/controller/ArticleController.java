@@ -15,7 +15,7 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/admin")
 public class ArticleController {
 
 
@@ -26,7 +26,18 @@ public class ArticleController {
         articleService = theArticleService;
     }
 
-    @GetMapping("/admin")
+//    @GetMapping("/admin")
+//    public String admin(Model model) {
+//
+//        // get articles from DB with findAll from service
+////        List<Article> allArticles = articleService.findAll();
+////        model.addAttribute("articles", allArticles);
+//
+//        // return html page that displays articles
+//        return "fancy-login";
+//    }
+
+    @GetMapping("/list")
     public String allArticles(Model model) {
 
         // get articles from DB with findAll from service
@@ -34,67 +45,7 @@ public class ArticleController {
         model.addAttribute("articles", allArticles);
 
         // return html page that displays articles
-        return "admin/list-articles";
-    }
-
-//    @PostMapping("/upload") // //new annotation since 4.3
-//    public String upload(Model model, @RequestParam("files") MultipartFile[] files) {
-//        StringBuilder fileNames = new StringBuilder();
-//            for (MultipartFile file : files){
-//                Path fileNameAndPath = Paths.get(uploadDirectory, file.getOriginalFilename());
-//                fileNames.append(file.getOriginalFilename());
-//                try {
-//                    Files.write(fileNameAndPath, file.getBytes());
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        model.addAttribute("msg", "upload success : " + fileNames.toString().concat(", ") + ", " + uploadDirectory.toString());
-//
-//        return "uploadview";
-//    }
-
-
-
-    @GetMapping("/")
-    public String emptyhome(){
-        return "home";
-    }
-    @GetMapping("/home")
-    public String home(){
-        return "home";
-    }
-
-    @GetMapping("/stages")
-    public String stages(){
-        return "stages";
-    }
-
-    @GetMapping("/contact")
-    public String contact(){
-        return "contact";
-    }
-
-    @GetMapping("/photos")
-    public String photos(){
-        return "photos";
-    }
-
-    @GetMapping("/summer")
-    public String summer(Model model){
-
-        return "trainings/summer";
-    }
-
-    @GetMapping("/actus")
-    public String news(Model model) {
-
-        // get articles from DB with findAll from service
-        List<Article> allArticles = articleService.findAll();
-        model.addAttribute("articles", allArticles);
-
-        // return html page that displays articles
-        return "actus";
+        return "/admin/list-articles";
     }
 
     @GetMapping("/showFormForAdd")
@@ -153,7 +104,7 @@ public class ArticleController {
 
 
         // redirect to list
-        return "redirect:/admin";
+        return "redirect:/admin/list";
     }
 
     @GetMapping("/delete")
@@ -163,7 +114,7 @@ public class ArticleController {
         articleService.deleteById(theId);
 
         // redirect to employees/list
-        return "redirect:/admin";
+        return "redirect:/admin/list";
     }
 
     @GetMapping("/articles/{theId}")

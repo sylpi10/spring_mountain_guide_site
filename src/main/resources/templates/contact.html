@@ -10,20 +10,23 @@
 </header>
 <div class="container text-center">
     <h1>Contact me !!!</h1>
+
+      <img th:src="@{img/about.jpg}" alt="Person picture" width="600">
+    <hr class="m-5">
     <form class="was-validated">
         <div class="form-row">
             <div class="col-md-6 mb-3">
-                <label for="validationDefault01">First name</label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="Your Name" required>
+                <label for="validationDefault01">Votre Nom</label>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Votre Nom" required>
             </div>
             <div class="col-md-6 mb-3">
-                <label for="validationDefault02">Last name</label>
-                <input type="email" class="form-control" id="validationDefault02" placeholder="Your Mail" required>
+                <label for="validationDefault02">Votre Mail</label>
+                <input type="email" class="form-control" id="validationDefault02" placeholder="Votre Mail" required>
             </div>
         </div>
         <div class="mb-3">
-            <label for="validationTextarea">Textarea</label>
-            <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Your message" required></textarea>
+            <label for="validationTextarea">Votre Message</label>
+            <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Votre message" required></textarea>
         </div>
 
         <button class="btn btn-primary" type="submit">Send</button>
