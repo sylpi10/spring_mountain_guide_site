@@ -3,6 +3,9 @@ body{
    box-sizing: border-box;
    background-color: #e9f5f8;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @font-face {
     font-family:'Escape';
@@ -26,12 +29,16 @@ body{
      font-style: normal;
 }
 
+/*  containers of different pages*/
+.container, .home-container, .album-container{
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
 
 .home-body{
     background: url("../img/back2.jpg") no-repeat center;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
     margin-top:-80px;
 }
 .home-body nav ul li a{
@@ -57,10 +64,21 @@ body{
     font-size: 1.6rem;
     color:#fff;
 }
-.container, .home-container, .album-container{
-    margin-top: 80px;
-    margin-bottom: 120px;
+.next-activities-link{
+    width: 200px;
+    margin:auto;
+    text-align:center;
+    background-color: #fff;
+    border-radius: 20px;
 }
+#next-activities{
+    width: 74%;
+    padding: 60px 30px;
+    background-color:#6495ED;
+    margin:auto;
+    margin-top: 30%;
+}
+
 .album-container{
     width: 80%;
     margin: auto;
