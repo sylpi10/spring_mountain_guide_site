@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <title>Admin</title>
@@ -11,9 +12,18 @@
     <header>
         <div th:replace="fragments/header :: menu"></div>
     </header>
+
+    <div sec:authorize="hasAnyRole('ROLE_ADMIN')">
     <div class="container">
 
         <h1>News </h1>
+
+        <div>
+            User: <span sec:authentication="name"></span>
+            <br>
+            Role(s): <span sec:authentication="principal.authorities"></span>
+            <br><br>
+        </div>
 
         <hr>
 
@@ -54,6 +64,7 @@
             <input type="submit" value="Logout" class="btn btn-outline-primary mt-2" />
 
         </form>
+    </div>
     </div>
 </body>
 </html>
