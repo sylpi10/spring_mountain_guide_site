@@ -12,23 +12,21 @@ import java.util.List;
 
 @Controller
 @RequestMapping("")
-public class HomeController {
+public class NewsController {
 
     private ArticleService articleService;
 
     @Autowired
-    public HomeController(ArticleService theArticleService){
+    public NewsController(ArticleService theArticleService){
         articleService = theArticleService;
     }
 
-    @GetMapping("/index")
-    public String home(Model model){
+    @GetMapping("/sorties")
+    public String stages(Model model){
 
         List<Article> allArticles = articleService.findAll();
         model.addAttribute("articles", allArticles);
-        return "index";
-    }
 
-    @GetMapping("login")
-    public String login(){ return "login";}
+        return "sorties/actus";
+    }
 }
