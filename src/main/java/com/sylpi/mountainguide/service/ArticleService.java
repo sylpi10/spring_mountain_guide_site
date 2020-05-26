@@ -2,6 +2,7 @@ package com.sylpi.mountainguide.service;
 
 import com.sylpi.mountainguide.entity.Article;
 
+import java.util.Date;
 import java.util.List;
 
 public interface ArticleService {
@@ -13,4 +14,5 @@ public interface ArticleService {
     public void save (Article theArticle);
 
     public void deleteById(int theId);
+
 }

@@ -110,6 +110,9 @@ nav ul {
 .next-activities article>p{
      width: 340px;
 }
+.next-activities article>h5{
+    font-style: italic;
+}
  .event-links{
     width: 74%;
     margin:auto;
@@ -157,7 +160,9 @@ nav ul {
 .detail-activities>article>p{
      width: 340px;
 }
-
+.detail-activities>article>h5{
+    font-style: italic;
+}
 .detail-activity-price{
     background-color: #333;
     color: #fff;

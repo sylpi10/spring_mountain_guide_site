@@ -126,20 +126,19 @@ public class ArticleController {
         return article;
     }
 
-
-    @PostMapping("/")
-    public Article save(@RequestBody Article theArticle) {
-        theArticle.setId(0);
-
-        articleService.save(theArticle);
-        return theArticle;
-    }
-
-    @PutMapping("/")
-    public Article updateArticle(@RequestBody Article theArticle){
-        articleService.save(theArticle);
-        return theArticle;
-    }
+//    @PostMapping("/")
+//    public Article save(@RequestBody Article theArticle) {
+//        theArticle.setId(0);
+//
+//        articleService.save(theArticle);
+//        return theArticle;
+//    }
+//
+//    @PutMapping("/")
+//    public Article updateArticle(@RequestBody Article theArticle){
+//        articleService.save(theArticle);
+//        return theArticle;
+//    }
 
     @DeleteMapping("/{id}")
 
