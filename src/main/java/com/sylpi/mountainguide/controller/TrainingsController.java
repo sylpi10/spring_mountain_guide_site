@@ -27,14 +27,14 @@ public class TrainingsController {
     }
 
 
-    @GetMapping("/alpinisme")
+    @GetMapping("alpinisme")
     public String alpi(Model model){
         List<Article> allArticles = articleService.findAll();
         model.addAttribute("articles", allArticles);
         return "trainings/details/alpinisme";
     }
 
-    @GetMapping("/escalade")
+    @GetMapping("escalade")
     public String escalade(Model model){
         List<Article> allArticles = articleService.findAll();
         model.addAttribute("articles", allArticles);
