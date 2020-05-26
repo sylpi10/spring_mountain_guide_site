@@ -9,7 +9,7 @@
 <div class="home-body">
     <header>
         <!--    <div th:replace="fragments/header :: menu"></div>-->
-        <nav class="navbar navbar-expand-md fixed-top text-white">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark">
             <a class="navbar-brand" th:href="@{/index}">LOGO</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,7 +91,11 @@
     <div th:replace="fragments/footer :: foot">
 
     </div>
+
 </div>
+
+    <script th:src="@{/scripts/navbar.js}"></script>
+
 </body>
 </html>
 
