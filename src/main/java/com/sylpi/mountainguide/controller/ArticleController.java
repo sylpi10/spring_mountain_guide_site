@@ -45,7 +45,7 @@ public class ArticleController {
         model.addAttribute("articles", allArticles);
 
         // return html page that displays articles
-        return "/admin/index";
+        return "admin/index";
     }
 
     @GetMapping("/showFormForAdd")
