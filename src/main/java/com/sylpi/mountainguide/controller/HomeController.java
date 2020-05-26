@@ -21,6 +21,14 @@ public class HomeController {
         articleService = theArticleService;
     }
 
+    @GetMapping("")
+    public String homeindex(Model model){
+
+        List<Article> allArticles = articleService.findAll();
+        model.addAttribute("articles", allArticles);
+        return "index";
+    }
+
     @GetMapping("/index")
     public String home(Model model){
 
