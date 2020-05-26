@@ -1,15 +1,19 @@
 body{
    margin:0;padding:0;
    box-sizing: border-box;
-   background: url("../img/body-bg.jpg") no-repeat center;
-   background-attachment: fixed;
-   background-size: cover;
+   /*background: url("../img/body-bg.jpg") no-repeat center;*/
+ /*  background-attachment: fixed;
+   background-size: cover;*/
    margin-top:-80px;
+   background-color:#f8f9fa;
 }
 html {
   scroll-behavior: smooth;
 }
-
+h1{
+   font-family: Escape;
+   color: rgba(70,130,180, 1);
+}
 @font-face {
     font-family:'Escape';
     src: local('Vtks Escape'),
@@ -66,7 +70,6 @@ nav ul {
 .home-container>h1{
     padding-top: 220px;
     color:#fff;
-    font-family: Snowby;
     text-transform: uppercase;
     font-weight: lighter;
     font-size: 4.5rem;
@@ -84,9 +87,13 @@ nav ul {
 }
 
 /* ACTIVITIES LIST on HOME PAGE*/
+
+/*anchor */
 #next-activities{
     margin-top: 20%;
 }
+
+/* list of activities to come*/
 .next-activities{
     width: 74%;
     padding: 30px 60px;
@@ -95,26 +102,51 @@ nav ul {
     margin-top: 25%;
 }
 
-.next-activities-content, .event-links{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 60%;
-    margin:auto;
-}
-
-.next-activities-content>article{
-    width: 40%;
-    margin:auto;
-}
  .event-links{
-    width: 40%;
+    width: 74%;
+    margin:auto;
  }
 .event-links>a{
     background-color: #fff;
     padding: 8px 14px;
     width:200px;
     text-align: center;
+}
+
+/*Trainings list page*/
+
+.trainings-container h2{
+    text-transform: uppercase;
+}
+.trainings-container h3{
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.training{
+    margin-top: 50px;
+}
+
+/* TRAININGS DETAILS */
+.training-levels-duration ul{
+    margin-left: -40px;
+}
+
+.training-levels-duration ul>li{
+    list-style-type: none;
+    background-color: rgba(70,130,180, .3);
+    border: 1px solid #ccc;
+    margin:0;
+    padding:4px 8px;
+}
+.detail-activities{
+    background-color: rgba(70,130,180, .3);
+    width: 100%;
+    margin:auto;
+}
+
+.detail-activity>article{
+    width: 40%;
 }
 
 
@@ -133,8 +165,6 @@ nav ul {
     margin:auto;
     padding: 10px;
 }
-
-
 
 footer{
     margin-top: 50vh;
