@@ -15,7 +15,7 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("admin")
 public class ArticleController {
 
 
@@ -37,7 +37,7 @@ public class ArticleController {
 //        return "fancy-login";
 //    }
 
-    @GetMapping("/list")
+    @GetMapping("list")
     public String allArticles(Model model) {
 
         // get articles from DB with findAll from service
@@ -45,7 +45,7 @@ public class ArticleController {
         model.addAttribute("articles", allArticles);
 
         // return html page that displays articles
-        return "/admin/list-articles";
+        return "/admin/index";
     }
 
     @GetMapping("/showFormForAdd")

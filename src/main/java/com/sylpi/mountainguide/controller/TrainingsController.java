@@ -21,7 +21,7 @@ public class TrainingsController {
         articleService = theArticleService;
     }
 
-    @GetMapping("/stages")
+    @GetMapping("stages")
     public String stages(){
         return "trainings/stages";
     }
