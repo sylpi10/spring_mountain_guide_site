@@ -55,6 +55,8 @@
             <p th:text="${article.content}"></p>
             <!--        <img th:src="${tempArticle.picture}" alt="pic" width="420">-->
             <img th:src="@{/photos/article/} + ${article.id} + .jpg" alt="picture" width="300" height="200">
+
+            <p class="detail-activity-price mt-3"> A partir de 50€/ personne.</p>
         </article>
 
     </section>

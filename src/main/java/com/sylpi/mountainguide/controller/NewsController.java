@@ -21,12 +21,12 @@ public class NewsController {
         articleService = theArticleService;
     }
 
-    @GetMapping("/sorties")
+    @GetMapping("/actus")
     public String stages(Model model){
 
         List<Article> allArticles = articleService.findAll();
         model.addAttribute("articles", allArticles);
 
-        return "sorties/actus";
+        return "actus/actus";
     }
 }

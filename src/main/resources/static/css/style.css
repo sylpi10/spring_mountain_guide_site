@@ -101,7 +101,9 @@ nav ul {
     margin:auto;
     margin-top: 25%;
 }
-
+.next-activities article>p{
+     width: 340px;
+}
  .event-links{
     width: 74%;
     margin:auto;
@@ -145,10 +147,15 @@ nav ul {
     margin:auto;
 }
 
-.detail-activity>article{
-    width: 40%;
+.detail-activities>article>p{
+     width: 340px;
 }
 
+.detail-activity-price{
+    background-color: #333;
+    color: #fff;
+    padding: 6px;
+}
 
 /* PHOTOS */
 .album-container{

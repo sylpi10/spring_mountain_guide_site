@@ -41,7 +41,7 @@ public class TrainingsController {
         return "trainings/details/escalade";
     }
 
-    @GetMapping("HorsPiste")
+    @GetMapping("hors-piste")
     public String horspiste(Model model){
 //        List<Article> allArticles = articleService.findAll();
 //        model.addAttribute("articles", allArticles);
