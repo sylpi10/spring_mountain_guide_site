@@ -40,4 +40,11 @@ public class TrainingsController {
         model.addAttribute("articles", allArticles);
         return "trainings/details/escalade";
     }
+
+    @GetMapping("HorsPiste")
+    public String horspiste(Model model){
+//        List<Article> allArticles = articleService.findAll();
+//        model.addAttribute("articles", allArticles);
+        return "trainings/details/horspiste";
+    }
 }
