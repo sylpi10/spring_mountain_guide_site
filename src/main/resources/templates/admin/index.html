@@ -33,6 +33,8 @@
                 <th>Description</th>
                 <th>Image</th>
                 <th>Prix/pers</th>
+                <th>Niveau</th>
+                <th>Durée</th>
                 <th colspan="2" class="text-center">Action</th>
             </tr>
             </thead>
@@ -47,10 +49,13 @@
                     <img th:src="@{/images/} + ${tempArticle.id} + .jpg" alt="pic" width="170">
                 </td>
                 <td th:text="${tempArticle.price}"></td>
-                <td><a th:href="@{/admin/showFormForUpdate(articleId=${tempArticle.id})}" class="btn btn-primary">Update</a> </td>
+                <td th:text="${tempArticle.level}"><span> € </span> </td>
+                <td th:text="${tempArticle.duration}"></td>
+
+                <td><a th:href="@{/admin/showFormForUpdate(articleId=${tempArticle.id})}" class="btn btn-primary">Modifier</a> </td>
                 <td><a th:href="@{/admin/delete(articleId=${tempArticle.id})}" class="btn btn-danger"
                        onclick="if (!(confirm('Are you sure you want to delete this article ?'))) return false"
-                >Delete</a> </td>
+                >Supprimer</a> </td>
             </tr>
             </tbody>
         </table>
@@ -59,7 +64,7 @@
         <form action="#" th:action="@{/logout}"
               method="POST">
 
-            <input type="submit" value="Logout" class="btn btn-outline-primary mt-2" />
+            <input type="submit" value="Déconnexion" class="btn btn-outline-primary mt-2" />
 
         </form>
     </div>

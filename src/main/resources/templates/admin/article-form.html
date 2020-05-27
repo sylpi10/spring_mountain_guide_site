@@ -21,11 +21,36 @@
             <input type="text" th:field="*{title}" class="form-control mb-2 w-50" placeholder="Titre">
             <input type="date" th:field="*{date}" class="form-control mb-2 w-50" placeholder="Date">
             <textarea type="text" th:field="*{content}" class="form-control mb-2 w-50" placeholder="Description"></textarea>
-           <!-- <input type="text" th:field="*{picture}" class="form-control mb-2 w-50" placeholder="Image">-->
-             <input type="file" th:field="*{picture}" name="files" class="form-control mb-2 w-50" multiple>
-             <input type="number" th:field="*{price}" name="price" class="form-control mb-2 w-50">
+            <input type="file" th:field="*{picture}" name="files" class="form-control mb-2 w-50" multiple>
 
-            <button type="submit" class="btn btn-info">Save</button>
+            <label for="price">Prix</label>
+            <input type="number" th:field="*{price}" id="price" name="price" class="form-control mb-2 w-50" placeholder="Prix">
+
+            <label for="level">Niveau: </label>
+            <select id="level" th:field="*{level}" name="duration">
+                <option value="Tous">Tous</option>
+                <option value="Découverte">Découverte</option>
+                <option value="Intermédiaire">Intermédiaire</option>
+                <option value="Avancé">Avancé</option>
+            </select>
+            <br>
+<!--             <input type="text" th:field="*{level}" name="price" class="form-control mb-2 w-50" placeholder="Niveau">-->
+
+<!--            <label for="duration">Durée en jours</label>-->
+
+<!--            <input type="number" th:field="*{duration}" id="duration" name="price" class="form-control mb-2 w-50" step="0.5">-->
+
+            <label for="duration">Durée: </label>
+            <select id="duration" th:field="*{duration}" name="duration">
+                <option value="1/2 jour">1/2 jour</option>
+                <option value="1 jour">1 jour</option>
+                <option value="2 jours">2 jours</option>
+                <option value="3 jours">3 jours</option>
+            </select>
+            <br>
+            <br>
+
+            <button type="submit" class="btn btn-info">Enregister</button>
         </form>
 
         <!--<form method="POST" action="/upload" enctype="multipart/form-data">
@@ -34,7 +59,7 @@
         </form> -->
 
         <hr>
-        <a th:href="@{/admin/list}">Back to Articles list</a>
+        <a th:href="@{/admin/list}">Retour</a>
     </div>
 </body>
 </html>

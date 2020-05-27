@@ -5,7 +5,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Table(name="articles")
@@ -29,6 +28,10 @@ public class Article {
     private LocalDate date;
     @Column(name = "price")
     private int price;
+    @Column(name = "level")
+    private String level;
+    @Column(name = "Duration")
+    private String duration;
 
     public Article() {
     }
@@ -41,7 +44,7 @@ public class Article {
         this.picture = picture;
     }
 
-    public Article(int id, String category, String title, String content, MultipartFile picture, LocalDate date, int price) {
+    public Article(int id, String category, String title, String content, MultipartFile picture, LocalDate date, int price, String level, String duration) {
         this.id = id;
         this.category = category;
         this.title = title;
@@ -49,6 +52,8 @@ public class Article {
         this.picture = picture;
         this.date = date;
         this.price = price;
+        this.level = level;
+        this.duration = duration;
     }
 
     public int getId() {
@@ -105,5 +110,21 @@ public class Article {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 }
