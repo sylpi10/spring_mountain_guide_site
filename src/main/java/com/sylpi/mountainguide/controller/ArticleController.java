@@ -95,7 +95,9 @@ public class ArticleController {
         try {
             byte[] bytes = articleImage.getBytes();
             String imageName = theArticle.getId()+".jpg";
-            BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File("src/main/resources/static/photos/article/"+imageName)));
+            BufferedOutputStream stream =
+                    new BufferedOutputStream(new FileOutputStream(
+                            new File("src/main/resources/static/photos/article/"+imageName)));
             stream.write(bytes);
             stream.close();
         } catch (Exception e){
