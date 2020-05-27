@@ -16,14 +16,8 @@
 <!--    <div sec:authorize="hasAnyRole('ROLE_ADMIN')">-->
     <div class="container">
 
-        <h1>News </h1>
+        <h1>Welcome, <span class="text-capitalize" sec:authentication="name"></span> </h1>
 
-        <div>
-            User: <span sec:authentication="name"></span>
-            <br>
-            Role(s): <span sec:authentication="principal.authorities"></span>
-            <br><br>
-        </div>
 
         <hr>
 
