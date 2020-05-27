@@ -58,7 +58,11 @@ nav ul {
 }
 .home-body>header>nav{
     transition: background-color .4s ease;
-    background-color: rgba( 42, 82, 141, 1);
+}
+@media screen and (max-width: 740px){
+    .home-body>header>nav{
+        background-color: rgba( 42, 82, 141, 1);
+    }
 }
 nav ul li{
     width: 86px;
@@ -68,9 +72,6 @@ nav ul li .active{
     background-color: rgba(0,0,0,.03) !important;
 }
 
-.home-body nav ul li a:hover{
-    color: #aaa;
-}
 .home-container{
     width: 94%;
     margin: auto;
