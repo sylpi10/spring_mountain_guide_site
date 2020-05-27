@@ -47,4 +47,25 @@ public class TrainingsController {
 //        model.addAttribute("articles", allArticles);
         return "trainings/details/horspiste";
     }
+
+    @GetMapping("ski-rando")
+    public String rando(Model model){
+//        List<Article> allArticles = articleService.findAll();
+//        model.addAttribute("articles", allArticles);
+        return "trainings/details/skirando";
+    }
+
+    @GetMapping("cascade-glace")
+    public String cascade(Model model){
+//        List<Article> allArticles = articleService.findAll();
+//        model.addAttribute("articles", allArticles);
+        return "trainings/details/cascade";
+    }
+
+    @GetMapping("trek")
+    public String trek(Model model){
+//        List<Article> allArticles = articleService.findAll();
+//        model.addAttribute("articles", allArticles);
+        return "trainings/details/trek";
+    }
 }

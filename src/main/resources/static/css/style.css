@@ -123,7 +123,10 @@ nav ul li .active{
 .next-activities article>h5{
     font-style: italic;
 }
-.next-activities article .details-link{
+.next-activities article .details-links{
+    margin-top: 30px;
+}
+.next-activities article .details-links a{
     background-color: #333;
     color: #fff;
     width: 200px;
@@ -181,9 +184,10 @@ nav ul li .active{
     font-style: italic;
 }
 .detail-activity-price{
-    background-color: #333;
+    /*background-color: #333;*/
+    border: solid 1 px #333;
     color: #fff;
-    padding: 6px;
+    padding: 6px 0;
 }
 
 .detail-activities>article .details-link{
