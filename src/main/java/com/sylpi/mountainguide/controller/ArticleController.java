@@ -98,6 +98,7 @@ public class ArticleController {
             BufferedOutputStream stream =
                     new BufferedOutputStream(new FileOutputStream(
                             new File("src/main/resources/static/photos/article/"+imageName)));
+//                            new File("src/main/resources/images/article/"+imageName)));
             stream.write(bytes);
             stream.close();
         } catch (Exception e){

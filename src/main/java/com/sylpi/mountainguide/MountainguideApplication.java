@@ -16,13 +16,21 @@ public class MountainguideApplication {
 	}
 
 
+//	@Configuration
+//	public class WebConfig implements WebMvcConfigurer{
+//		@Override
+//		public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//			registry.addResourceHandler("/**")
+//					.addResourceLocations("classpath:/static/","classpath:/photos/article")
+//					.setCachePeriod(0);
+//		}
+//	}
+
 	@Configuration
-	public class WebConfig implements WebMvcConfigurer{
+	public class AdditionalResourceWebConfiguration implements WebMvcConfigurer {
 		@Override
-		public void addResourceHandlers(ResourceHandlerRegistry registry) {
-			registry.addResourceHandler("/**")
-					.addResourceLocations("classpath:/static/","classpath:/photos/article")
-					.setCachePeriod(0);
+		public void addResourceHandlers(final ResourceHandlerRegistry registry) {
+			registry.addResourceHandler("static/photos/**").addResourceLocations("file:static/photos/article");
 		}
 	}
 }
