@@ -177,23 +177,23 @@ nav ul li .active{
     margin:auto;
 }
 
-.detail-activities>article>p{
-     width: 340px;
-}
 .detail-activities>article>h5{
     font-style: italic;
 }
 .detail-activity-price{
     /*background-color: #333;*/
-    border: solid 1 px #333;
-    color: #fff;
+    border: solid 1px #333;
+    color: #333;
     padding: 6px 0;
+    width:300px;
+    margin:20px auto;
 }
 
 .detail-activities>article .details-link{
     background-color: #fff;
     width:200px;
     padding: 8px 14px;
+    text-transform: capitalize;
 }
 
 /* PHOTOS */
