@@ -30,7 +30,7 @@ public class MountainguideApplication {
 	public class AdditionalResourceWebConfiguration implements WebMvcConfigurer {
 		@Override
 		public void addResourceHandlers(final ResourceHandlerRegistry registry) {
-			registry.addResourceHandler("static/photos/article**").addResourceLocations("file:static/photos/article");
+			registry.addResourceHandler("images/**").addResourceLocations("file:images/");
 		}
 	}
 }
