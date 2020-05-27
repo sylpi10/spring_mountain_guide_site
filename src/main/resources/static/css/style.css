@@ -60,13 +60,17 @@ nav ul {
     transition: background-color .4s ease;
     background-color: rgba( 42, 82, 141, 1);
 }
-
-/*.home-body nav ul li a{
-    color: #fff;
+nav ul li{
+    width: 86px;
+    text-align: center;
 }
+nav ul li .active{
+    background-color: rgba(0,0,0,.03) !important;
+}
+
 .home-body nav ul li a:hover{
     color: #aaa;
-}*/
+}
 .home-container{
     width: 94%;
     margin: auto;
