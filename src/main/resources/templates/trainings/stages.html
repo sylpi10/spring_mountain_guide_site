@@ -10,35 +10,35 @@
 </header>
 
 <div class="container text-center trainings-container">
-    <h1>Sorties</h1>
+    <h1 th:text="#{training-title}"></h1>
      <h5 class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
          nisi ut aliquip ex ea commodo consequat.</h5>
 
     <div class="trainings-wrapper d-flex flex-wrap justify-content-between">
         <div class="summer training">
-                <h2>été</h2>
-                <h3><a th:href="@{/alpinisme}"> &#x2B9A; Alpinisme </a> </h3>
-                <h3><a th:href="@{/escalade}"> &#x2B9A; Escalade </a> </h3>
+                <h2 th:text="#{summer-title}"></h2>
+                <h3><a th:href="@{/alpinisme}"> &#x2B9A; <span th:text="#{alpi-name}"></span> </a> </h3>
+                <h3><a th:href="@{/escalade}"> &#x2B9A; <span th:text="#{climb-name}"></span></a> </h3>
                 <img th:src="@{img/summer.jpg}" width="500" height="300" alt="">
         </div>
         <div class="winter training">
-                <h2>Hiver</h2>
-                <h3><a th:href="@{/hors-piste}"> &#x2B9A; Ski hors-piste </a> </h3>
-                <h3><a th:href="@{#}"> &#x2B9A; Cascade de Glace </a> </h3>
+                <h2 th:text="#{winter-title}"></h2>
+                <h3><a th:href="@{/hors-piste}"> &#x2B9A; <span th:text="#{wild-ski-name}"></span> </a> </h3>
+                <h3><a th:href="@{#}"> &#x2B9A; <span th:text="#{ice-climb-name}"></span> </a> </h3>
                 <img th:src="@{img/winter.jpg}" width="500" height="300" alt="">
         </div>
         <div class="spring training">
-                <h2>Printemps</h2>
-                <h3><a th:href="@{#}"> &#x2B9A; Ski de Randonnée </a> </h3>
-                <h3><a th:href="@{#}"> &#x2B9A; Escalade </a> </h3>
+                 <h2 th:text="#{spring-title}"></h2>
+                <h3><a th:href="@{#}"> &#x2B9A; <span th:text="#{ski-touring-name}"></span> </a> </h3>
+                <h3><a th:href="@{#}"> &#x2B9A;<span th:text="#{climb-name}"></span> </a> </h3>
                 <img th:src="@{img/spring.jpg}" width="500" height="300" alt="">
         </div>
         <div class="autumn training">
-                <h2>Automne</h2>
-            <h3><a th:href="@{#}"> &#x2B9A; Escalade </a> </h3>
-            <h3><a th:href="@{#}"> &#x2B9A; Trek </a> </h3>
-            <h3><a th:href="@{#}"> &#x2B9A; Himalayisme </a> </h3>
+            <h2 th:text="#{autumn-title}"></h2>
+            <h3><a th:href="@{#}"> &#x2B9A;<span th:text="#{climb-name}"></span> </a> </h3>
+            <h3><a th:href="@{#}"> &#x2B9A;<span th:text="#{trek-name}"></span> </a> </h3>
+            <h3><a th:href="@{#}"> &#x2B9A; <span th:text="#{Himalayanism-name}"></span> </a> </h3>
             <img th:src="@{img/autumn.jpg}" width="500" height="300" alt="">
         </div>
     </div>

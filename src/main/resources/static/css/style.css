@@ -71,6 +71,10 @@ nav ul li{
 nav ul li .active{
     background-color: rgba(0,0,0,.03) !important;
 }
+.lang-switch:hover{
+   opacity: .8;
+   cursor:pointer;
+}
 
 .home-container{
     width: 94%;

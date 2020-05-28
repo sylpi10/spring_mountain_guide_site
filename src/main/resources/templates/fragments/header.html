@@ -22,27 +22,32 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" th:href="@{/index}">Accueil</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" th:href="@{/index}" th:text="#{home-title}"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" th:href="@{/stages}">Stages</a>
+                            <a class="nav-link" th:href="@{/stages}" th:text="#{trainings-title}"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" th:href="@{/actus}">Actus</a>
+                            <a class="nav-link" th:href="@{/actus}" th:text="#{news-title}"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" th:href="@{/photos}">Photos</a>
+                            <a class="nav-link" th:href="@{/photos}" th:text="#{pics-title}"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" th:href="@{/contact}">Contact</a>
+                            <a class="nav-link" th:href="@{/contact}" th:text="#{contact-title}"></a>
                         </li>
                     </ul>
-
+<!--                    <button class="btn btn-info lang-switch" onclick="window.location.replace('?lang=EN')">En</button>-->
+<!--                    <button class="btn btn-info lang-switch ml-2" onclick="window.location.replace('?lang=FR')">Fr</button>-->
+                    <img th:src="@{img/en.png}" alt="English switcher" width="30" class="lang-switch" title="Switch to English"
+                         onclick="window.location.replace('?lang=EN')">
+                    <img th:src="@{img/fr.png}" alt="French switcher" width="30" class="lang-switch" title="Texte en Français"
+                         onclick="window.location.replace('?lang=FR')">
                 </div>
             </nav>
+           </header>
 
-        </header>
     </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
                 xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <div th:replace="fragments/header :: myHeader"></div>
-    <title>Home</title>
+    <title th:text="#{home-title}"></title>
 </head>
 <body>
 <div class="home-body">
@@ -18,22 +18,25 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="nav navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" th:href="@{/index}">Accueil</a>
+                        <a class="nav-link" th:href="@{/index}" th:text="#{home-title}"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/stages}">Stages</a>
+                        <a class="nav-link" th:href="@{/stages}" th:text="#{trainings-title}"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/actus}">Actus</a>
+                        <a class="nav-link" th:href="@{/actus}" th:text="#{news-title}"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/photos}">Photos</a>
+                        <a class="nav-link" th:href="@{/photos}" th:text="#{pics-title}"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/contact}">Contact</a>
+                        <a class="nav-link" th:href="@{/contact}" th:text="#{contact-title}"></a>
                     </li>
                 </ul>
-
+                <img th:src="@{img/en.png}" alt="English switcher" width="30" class="lang-switch" title="Switch to English"
+                     onclick="window.location.replace('?lang=EN')">
+                <img th:src="@{img/fr.png}" alt="French switcher" width="30" class="lang-switch" title="Texte en Français"
+                     onclick="window.location.replace('?lang=FR')">
             </div>
         </nav>
     </header>
@@ -42,8 +45,11 @@
     <div class="text-center home-container">
 
         <h1 class="text-center">Yoann Georges</h1>
-        <h2 class="text-center"> <i class="fas fa-skiing"></i>&nbsp;&nbsp;
-            Sorties en Montagne, Escalade, Alpinisme, Ski &nbsp;&nbsp; <i class="fas fa-quidditch"></i> </h2>
+        <h2 th:text="#{main-title.text}" class="text-center">
+<!--            <i class="fas fa-skiing"></i>&nbsp;&nbsp;-->
+<!--         &nbsp;&nbsp; <i class="fas fa-quidditch"></i>-->
+            Welcome
+        </h2>
 
 
         <p class="mt-5 p-5 w-50 text-center text-white m-auto">Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat,
@@ -55,7 +61,7 @@
 
 <!--    link to the activities to come, scroll down -->
     <div class="next-activities-link">
-        <a href="#next-activities">
+        <a href="#next-activities" th:text="#{next-trainings-title}">
             Prochaines sorties <br>
             <i class="fas fa-arrow-circle-down"></i>
         </a>
@@ -66,7 +72,7 @@
 
 <!--    list of activities to come-->
     <section class="next-activities text-white">
-        <h2>Prochaines sorties :</h2>
+        <h2 th:text="#{next-trainings-title}"></h2>
         <hr>
         <div class="row d-flex justify-content-around flex-wrap py-4 mt-5">
 

@@ -48,8 +48,8 @@
 <!--                    <img th:src="@{/photos/article/} + ${tempArticle.id} + .jpg" alt="pic" width="170">-->
                     <img th:src="@{/images/} + ${tempArticle.id} + .jpg" alt="pic" width="170">
                 </td>
-                <td th:text="${tempArticle.price}"></td>
-                <td th:text="${tempArticle.level}"><span> € </span> </td>
+                <td> <p th:text="${tempArticle.price}"> <span> €</span></p></td>
+                <td th:text="${tempArticle.level}"> </td>
                 <td th:text="${tempArticle.duration}"></td>
 
                 <td><a th:href="@{/admin/showFormForUpdate(articleId=${tempArticle.id})}" class="btn btn-primary">Modifier</a> </td>
