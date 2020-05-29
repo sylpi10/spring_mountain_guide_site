@@ -59,10 +59,14 @@ nav ul {
 .home-body>header>nav{
     transition: background-color .4s ease;
 }
-@media screen and (max-width: 740px){
-    .home-body>header>nav{
+
+@media screen and (max-width: 760px){
+    .home-body header>nav{
         background-color: rgba( 42, 82, 141, 1);
     }
+}
+header nav{
+    box-shadow: 2px 2px 2px #eee;
 }
 nav ul li{
     width: 86px;
@@ -70,6 +74,9 @@ nav ul li{
 }
 nav ul li .active{
     background-color: rgba(0,0,0,.03) !important;
+}
+.lang-switch{
+      margin-left: 10px;
 }
 .lang-switch:hover{
    opacity: .8;
