@@ -58,6 +58,7 @@ nav ul {
 }
 .home-body>header>nav{
     transition: background-color .4s ease;
+    box-shadow: none;
 }
 
 @media screen and (max-width: 760px){
