@@ -33,7 +33,7 @@ public class Internationalization implements WebMvcConfigurer {
     public ReloadableResourceBundleMessageSource messageSource(){
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
         messageSource.setBasename("classpath:/messages");
-        messageSource.setCacheSeconds(3600);
+//        messageSource.setCacheSeconds(3600);
         return messageSource;
     }
 
