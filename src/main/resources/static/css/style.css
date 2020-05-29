@@ -211,7 +211,7 @@ nav ul li .active{
     align-items: center;
 }
 .album{
-    min-width:50%;
+    min-width:30%;
     margin:auto;
     padding: 10px;
 }
