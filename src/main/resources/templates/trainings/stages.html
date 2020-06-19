@@ -15,33 +15,85 @@
          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
          nisi ut aliquip ex ea commodo consequat.</h5>
 
-    <div class="trainings-wrapper d-flex flex-wrap justify-content-between">
-        <div class="summer training">
-                <h2 th:text="#{summer-title}"></h2>
-                <h3><a th:href="@{/alpinisme}"> &#x2B9A; <span th:text="#{alpi-name}"></span> </a> </h3>
-                <h3><a th:href="@{/escalade}"> &#x2B9A; <span th:text="#{climb-name}"></span></a> </h3>
-                <img th:src="@{img/summer.jpg}" width="500" height="300" alt="">
+
+
+    <ul class="nav nav-tabs mt-5" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="summer-tab"
+               data-toggle="tab" href="#summer" role="tab" aria-controls="summer" aria-selected="true">
+                <h3 th:text="#{summer-title}"></h3></a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="winter-tab" data-toggle="tab" href="#winter"
+               role="tab" aria-controls="winter" aria-selected="false">
+                <h3 th:text="#{winter-title}"></h3></a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="spring-tab" data-toggle="tab" href="#spring"
+               role="tab" aria-controls="spring" aria-selected="false">
+                <h3 th:text="#{spring-title}"></h3></a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="autumn-tab" data-toggle="tab" href="#autumn"
+               role="tab" aria-controls="autumn" aria-selected="false">
+                <h3 th:text="#{autumn-title}"></h3></a>
+        </li>
+    </ul>
+
+<!--    activities list by season-->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="summer" role="tabpanel" aria-labelledby="summer-tab">
+            <div class="summer training"  th:each="article : ${articles}">
+
+                <h3>
+                    <a th:href="@{/detail(id=${article.id})}">
+                        &#x2B9A; <span th:text="${article.title}"></span>
+                    </a>
+                </h3>
+
+            </div>
+            <img th:src="@{img/summer.jpg}" width="500" height="300" alt="">
+
         </div>
-        <div class="winter training">
-                <h2 th:text="#{winter-title}"></h2>
-                <h3><a th:href="@{/hors-piste}"> &#x2B9A; <span th:text="#{wild-ski-name}"></span> </a> </h3>
-                <h3><a th:href="@{#}"> &#x2B9A; <span th:text="#{ice-climb-name}"></span> </a> </h3>
-                <img th:src="@{img/winter.jpg}" width="500" height="300" alt="">
+        <div class="tab-pane fade" id="winter" role="tabpanel" aria-labelledby="winter-tab">
+            <div class="winter training" th:each="article : ${articles}">
+                <h3>
+                    <a th:href="@{/detail(id=${article.id})}">
+                        &#x2B9A; <span th:text="${article.title}"></span>
+                    </a>
+                </h3>
+            </div>
+            <img th:src="@{img/winter.jpg}" width="500" height="300" alt="">
+
         </div>
-        <div class="spring training">
-                 <h2 th:text="#{spring-title}"></h2>
-                <h3><a th:href="@{#}"> &#x2B9A; <span th:text="#{ski-touring-name}"></span> </a> </h3>
-                <h3><a th:href="@{#}"> &#x2B9A;<span th:text="#{climb-name}"></span> </a> </h3>
-                <img th:src="@{img/spring.jpg}" width="500" height="300" alt="">
+
+        <div class="tab-pane fade" id="spring" role="tabpanel" aria-labelledby="spring-tab">
+            <div class="spring training" th:each="article : ${articles}">
+                <h3>
+                    <a th:href="@{/detail(id=${article.id})}">
+                        &#x2B9A; <span th:text="${article.title}"></span>
+                    </a>
+                </h3>
+
+            </div>
+            <img th:src="@{img/spring.jpg}" width="500" height="300" alt="">
         </div>
-        <div class="autumn training">
-            <h2 th:text="#{autumn-title}"></h2>
-            <h3><a th:href="@{#}"> &#x2B9A;<span th:text="#{climb-name}"></span> </a> </h3>
-            <h3><a th:href="@{#}"> &#x2B9A;<span th:text="#{trek-name}"></span> </a> </h3>
-            <h3><a th:href="@{#}"> &#x2B9A; <span th:text="#{Himalayanism-name}"></span> </a> </h3>
+        <div class="tab-pane fade" id="autumn" role="tabpanel" aria-labelledby="autumn-tab">
+            <div class="autumn training" th:each="article : ${articles}">
+                <h3>
+                    <a th:href="@{/detail(id=${article.id})}">
+                        &#x2B9A; <span th:text="${article.title}"></span>
+                    </a>
+                </h3>
+            </div>
             <img th:src="@{img/autumn.jpg}" width="500" height="300" alt="">
+
         </div>
     </div>
+
+
+</div>
+
 </div>
 
 <div th:replace="fragments/footer :: foot"></div>

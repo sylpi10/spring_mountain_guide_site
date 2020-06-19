@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: myHeader"></div>
+    <title>Details</title>
+</head>
+<header>
+    <div th:replace="fragments/header :: menu"></div>
+</header>
+<body>
+
+<div class="container trainings-container">
+
+
+    <div class="row d-flex justify-content-between flex-wrap mx-auto">
+        <div class="col-sm-5">
+            <h1 th:text="${article.title}"></h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Blanditiis deleniti dignissimos dolorum hic
+                incidunt iusto laudantium nisi omnis soluta sunt! Amet commodi dolores enim eveniet officia,
+                recusandae saepe sunt vel.</p>
+        </div>
+
+        <div class="col-sm-7">
+<!--            <img th:src="@{article.picture}" width="700" alt="">-->
+            <img th:src="@{/images/} + ${article.id} + .jpg" alt="picture" width="600" height="400">
+        </div>
+
+        <div class="col-12 mt-5 text-center">
+            <hr class="m-5">
+            <h2 class="mb-3"> [ tous les détails de l'activité ici ]</h2>
+
+            <h3>Le <span th:text="${#temporals.format(article.date, 'dd-MM-yyyy')}"></span></h3>
+            <h3>Description: <span th:text="${article.content}"></span></h3>
+            <h3>Catégorie: <span th:text="${article.category}"></span></h3>
+            <h3>Niveau: <span th:text="${article.level}"></span></h3>
+            <h3>Durée: <span th:text="${article.duration}"></span></h3>
+            <h3>Prix/personne: <span th:text="${article.price}"></span> €</h3>
+            <h2 class="display-4"> ... </h2>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
