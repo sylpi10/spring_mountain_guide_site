@@ -5,8 +5,13 @@
 </head>
 <body>
 
-<header  th:replace="fragments/header :: menu">
+<header>
+    <div th:insert="fragments/header :: menu"></div>
+    <div class="traduction" th:replace="fragments/header :: traduction" ></div>
 </header>
+
+
+
 
 <div class="container text-center trainings-container">
     <h1 th:text="#{training-title}"></h1>

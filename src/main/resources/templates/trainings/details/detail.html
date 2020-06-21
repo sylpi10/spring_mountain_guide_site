@@ -3,8 +3,35 @@
 <head th:replace="fragments/header :: myHeader">
     <title>Details</title>
 </head>
-<header>
-    <div th:replace="fragments/header :: menu"></div>
+<header class="bg-light">
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+        <a class="navbar-brand" th:href="@{/index}">LOGO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/index}" th:text="#{home-title}"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/stages}" th:text="#{trainings-title}"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/actus}" th:text="#{news-title}"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/photos}" th:text="#{pics-title}"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/contact}" th:text="#{contact-title}"></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
 </header>
 <body>
 
@@ -30,6 +57,12 @@
         <div class="col-12 mt-5 text-center">
             <hr class="m-5">
             <h2 class="mb-3"> [ tous les détails de l'activité ici ]</h2>
+
+
+            <div th:switch="__${#locale.language}__">
+                <h1 th:case="en">English</h1>
+                <h1 th:case="fr">français</h1>
+            </div>
 
             <h3>Le <span th:text="${#temporals.format(article.date, 'dd-MM-yyyy')}"></span></h3>
             <h3>Description: <span th:text="${article.content}"></span></h3>

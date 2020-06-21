@@ -49,6 +49,13 @@ nav ul {
     justify-content: space-around;
 }
 
+.traduction{
+    position:fixed;
+    top:60px;
+    right:20px;
+    z-index:99;
+}
+
 /* HOME PAGE */
 .home-body{
     background: url("../img/back2.jpg") no-repeat center;
