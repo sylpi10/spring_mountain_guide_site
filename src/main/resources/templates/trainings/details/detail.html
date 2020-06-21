@@ -41,7 +41,10 @@
 
     <div class="row mx-auto">
         <div class="col-sm-12 col-md-5">
-            <h1 th:text="${article.title}"></h1>
+            <h1 th:if="__${#locale.language}__=='en'" th:text="${article.englishTitle}">
+            </h1>
+            <h1 th:if="__${#locale.language}__=='fr'" th:text="${article.title}">
+            </h1>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Blanditiis deleniti dignissimos dolorum hic
@@ -83,7 +86,7 @@
 
             </div>
 
-            <div class=""th:if="__${#locale.language}__=='en'" >
+            <div class="" th:if="__${#locale.language}__=='en'" >
 
                 <h2 th:text="${article.englishTitle}"></h2>
                 <h3>Category: <span th:text="${article.englishCategory}"></span></h3>

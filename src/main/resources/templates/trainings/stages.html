@@ -50,7 +50,8 @@
 
                 <h3>
                     <a th:href="@{/detail(id=${article.id})}">
-                        &#x2B9A; <span th:text="${article.title}"></span>
+                        &#x2B9A; <span th:if="__${#locale.language}__=='fr'" th:text="${article.title}"></span>
+                         <span th:if="__${#locale.language}__=='en'" th:text="${article.englishTitle}"></span>
                     </a>
                 </h3>
 
@@ -62,7 +63,8 @@
             <div class="winter training" th:each="article : ${articles}">
                 <h3>
                     <a th:href="@{/detail(id=${article.id})}">
-                        &#x2B9A; <span th:text="${article.title}"></span>
+                        &#x2B9A; <span th:if="__${#locale.language}__=='fr'" th:text="${article.title}"></span>
+                       <span th:if="__${#locale.language}__=='en'" th:text="${article.englishTitle}"></span>
                     </a>
                 </h3>
             </div>
@@ -74,7 +76,8 @@
             <div class="spring training" th:each="article : ${articles}">
                 <h3>
                     <a th:href="@{/detail(id=${article.id})}">
-                        &#x2B9A; <span th:text="${article.title}"></span>
+                        &#x2B9A; <span th:if="__${#locale.language}__=='fr'" th:text="${article.title}"></span>
+                         <span th:if="__${#locale.language}__=='en'" th:text="${article.englishTitle}"></span>
                     </a>
                 </h3>
 
@@ -85,7 +88,8 @@
             <div class="autumn training" th:each="article : ${articles}">
                 <h3>
                     <a th:href="@{/detail(id=${article.id})}">
-                        &#x2B9A; <span th:text="${article.title}"></span>
+                        &#x2B9A; <span th:if="__${#locale.language}__=='fr'" th:text="${article.title}"></span>
+                         <span th:if="__${#locale.language}__=='en'" th:text="${article.englishTitle}"></span>
                     </a>
                 </h3>
             </div>
