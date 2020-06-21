@@ -1,7 +1,7 @@
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<body>
-    <div th:fragment="myHeader">
+
+    <head th:fragment="myHeader">
         <meta charset="UTF-8">
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" th:href="@{/css/style.css}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    </div>
+    </head>
+<body>
     <div th:fragment="menu">
 
         <header class="bg-light">
@@ -38,12 +39,13 @@
                             <a class="nav-link" th:href="@{/contact}" th:text="#{contact-title}"></a>
                         </li>
                     </ul>
-<!--                    <button class="btn btn-info lang-switch" onclick="window.location.replace('?lang=EN')">En</button>-->
-<!--                    <button class="btn btn-info lang-switch ml-2" onclick="window.location.replace('?lang=FR')">Fr</button>-->
-                    <img th:src="@{img/en.png}" alt="English switcher" width="26" class="lang-switch" title="Switch to English"
-                         onclick="window.location.replace('?lang=en')">
-                    <img th:src="@{img/fr.png}" alt="French switcher" width="26" class="lang-switch" title="Texte en Français"
-                         onclick="window.location.replace('?lang=fr')">
+                    <img th:src="@{img/en.png}" alt="English" width="26" class="lang-switch"
+                         title="Switch to English"
+                         onclick="window.location.assign('?lang=en')">
+
+                    <img th:src="@{img/fr.png}" alt="French" width="26"
+                         class="lang-switch" title="Texte en Français"
+                         onclick="window.location.assign('?lang=fr')">
                 </div>
             </nav>
            </header>

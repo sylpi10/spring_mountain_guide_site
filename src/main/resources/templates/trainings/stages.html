@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <div th:replace="fragments/header :: myHeader"></div>
+<head th:replace="fragments/header :: myHeader">
     <title>Stages</title>
 </head>
 <body>
-<header>
-    <div th:replace="fragments/header :: menu"></div>
+
+<header  th:replace="fragments/header :: menu">
 </header>
 
 <div class="container text-center trainings-container">
@@ -91,11 +90,9 @@
         </div>
     </div>
 
-
 </div>
 
-</div>
 
-<div th:replace="fragments/footer :: foot"></div>
+<footer th:replace="fragments/footer :: foot"></footer>
 </body>
 </html>

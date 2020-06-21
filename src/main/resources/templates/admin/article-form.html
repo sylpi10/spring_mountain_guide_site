@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Add Articles</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Add Articles</title>-->
+<!--    <link rel="stylesheet" th:href="@{/css/style.css}">-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">-->
 
+<!--</head>-->
+
+<head th:replace="fragments/header :: myHeader">
+    <title>Update</title>
 </head>
+
 <body>
+
+<header th:replace="fragments/header :: menu">
+</header>
+
     <div class="container">
         <h1>Add an article</h1>
         <hr>
@@ -72,5 +81,6 @@
         <hr>
         <a th:href="@{/admin/list}">Retour</a>
     </div>
+    <footer th:replace="fragments/footer :: foot"></footer>
 </body>
 </html>

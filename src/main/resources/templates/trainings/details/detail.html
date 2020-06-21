@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <div th:replace="fragments/header :: myHeader"></div>
+<head th:replace="fragments/header :: myHeader">
     <title>Details</title>
 </head>
 <header>
@@ -11,9 +10,10 @@
 
 <div class="container trainings-container">
 
+<!--    d-flex justify-content-between flex-wrap -->
 
-    <div class="row d-flex justify-content-between flex-wrap mx-auto">
-        <div class="col-sm-5">
+    <div class="row mx-auto">
+        <div class="col-sm-12 col-md-5">
             <h1 th:text="${article.title}"></h1>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -22,9 +22,9 @@
                 recusandae saepe sunt vel.</p>
         </div>
 
-        <div class="col-sm-7">
+        <div class="col-sm-12 col-md-7">
 <!--            <img th:src="@{article.picture}" width="700" alt="">-->
-            <img th:src="@{/images/} + ${article.id} + .jpg" alt="picture" width="600" height="400">
+            <img class="img-fluid" th:src="@{/images/} + ${article.id} + .jpg" alt="picture" width="640" height="400">
         </div>
 
         <div class="col-12 mt-5 text-center">
@@ -43,6 +43,6 @@
     </div>
 
 </div>
-
+    <footer th:replace="fragments/footer :: foot"></footer>
 </body>
 </html>

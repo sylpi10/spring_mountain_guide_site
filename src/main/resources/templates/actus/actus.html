@@ -1,8 +1,6 @@
 <!Doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-
-    <div th:replace="fragments/header :: myHeader"></div>
+<head th:replace="fragments/header :: myHeader">
     <title>Actus</title>
 </head>
 <body>
@@ -16,6 +14,6 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur corporis, dolorem ducimus, eum, ex illo illum in maxime modi nisi obcaecati possimus quam quia vel! Alias autem esse sed?</p>
 </div>
 
-<div th:replace="fragments/footer :: foot"></div>
+<footer th:replace="fragments/footer :: foot"></footer>
 </body>
 </html>

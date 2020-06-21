@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
-<head>
-    <meta charset="UTF-8">
-    <title>Admin</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Admin</title>-->
+<!--    <link rel="stylesheet" th:href="@{/css/style.css}">-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">-->
 
+<!--</head>-->
+
+<head th:replace="fragments/header :: myHeader">
+    <title>Admin Page</title>
 </head>
+
 <body>
-    <header>
-        <div th:replace="fragments/header :: menu"></div>
+    <header th:replace="fragments/header :: menu">
     </header>
 
 <!--    <div sec:authorize="hasAnyRole('ROLE_ADMIN')">-->
@@ -68,6 +72,7 @@
 
         </form>
     </div>
-<!--    </div>-->
+<footer th:replace="fragments/footer :: foot"></footer>
+
 </body>
 </html>
