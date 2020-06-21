@@ -49,12 +49,12 @@ nav ul {
     justify-content: space-around;
 }
 
-.traduction{
+/*.traduction{
     position:fixed;
     top:60px;
     right:20px;
     z-index:99;
-}
+}*/
 
 /* HOME PAGE */
 .home-body{

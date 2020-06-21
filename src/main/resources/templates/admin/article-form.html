@@ -27,45 +27,80 @@
             <input type="hidden" th:field="*{id}">
 
 <!--            <input type="text" th:field="*{category}" class="form-control mb-2 w-50" placeholder="Categorie">-->
+            <div class="row">
+                <div class="w-50">
+                    <label for="category">Discipline : </label>
+                    <select id="category" th:field="*{category}" name="category">
+                        <option value="Alpinisme">Alpinisme</option>
+                        <option value="Escalade">Escalade</option>
+                        <option value="Ski hors Piste">Ski hors Piste</option>
+                        <option value="Ski De Rando">Ski De Rando</option>
+                        <option value="Cascade de Glace">Cascade de Glace</option>
+                        <option value="Trek">Trek</option>
+                    </select>
+                </div>
 
-            <label for="category">Discipline : </label>
-            <select id="category" th:field="*{category}" name="category">
-                <option value="Alpinisme">Alpinisme</option>
-                <option value="Escalade">Escalade</option>
-                <option value="Ski hors Piste">Ski hors Piste</option>
-                <option value="Ski De Rando">Ski De Rando</option>
-                <option value="Cascade de Glace">Cascade de Glace</option>
-                <option value="Trek">Trek</option>
-            </select>
+                <div class="w-50">
+                    <label for="englishCategory">English Discipline : </label>
+                    <select id="englishCategory" th:field="*{englishCategory}"
+                            name="englishCategory">
+                        <option value="Alpinism">Alpinism</option>
+                        <option value="Cliff Climbing">Cliff Climbing</option>
+                        <option value="Wilderness Skiing">Wilderness Skiing</option>
+                        <option value="Ski Touring">Ski Touring</option>
+                        <option value="Ice Fall Climbing">Ice Fall Climbing</option>
+                        <option value="Trekking">Trekking</option>
+                    </select>
+                </div>
+            </div>
 
-            <input type="text" th:field="*{title}" class="form-control mb-2 w-50" placeholder="Titre">
+
+            <div class="row">
+                <input type="text" th:field="*{title}"
+                       class="form-control mb-2 col-md-6 col-sm-10" placeholder="Titre français">
+                <input type="text" th:field="*{englishTitle}"
+                       class="form-control mb-2 col-md-6 col-sm-10" placeholder="English Title">
+            </div>
             <input type="date" th:field="*{date}" class="form-control mb-2 w-50" placeholder="Date">
-            <textarea type="text" th:field="*{content}" class="form-control mb-2 w-50" placeholder="Description"></textarea>
+            <div class="row">
+                <textarea type="text" th:field="*{content}" class="form-control mb-2 w-50" placeholder="Description française"></textarea>
+                <textarea type="text" th:field="*{englishContent}" class="form-control mb-2 w-50" placeholder="English Description"></textarea>
+            </div>
+
             <input type="file" th:field="*{picture}" name="files" class="form-control mb-2 w-50" multiple>
 
             <label for="price">Prix</label>
             <input type="number" th:field="*{price}" id="price" name="price" class="form-control mb-2 w-50" placeholder="Prix">
 
-            <label for="level">Niveau: </label>
-            <select id="level" th:field="*{level}" name="duration">
-                <option value="Tous">Tous</option>
-                <option value="Découverte">Découverte</option>
-                <option value="Intermédiaire">Intermédiaire</option>
-                <option value="Avancé">Avancé</option>
-            </select>
+            <div class="row">
+                <div class="w-50">
+                    <label for="level">Niveau: </label>
+                    <select id="level" th:field="*{level}" name="level">
+                        <option value="Tous">Tous</option>
+                        <option value="Découverte">Découverte</option>
+                        <option value="Intermédiaire">Intermédiaire</option>
+                        <option value="Avancé">Avancé</option>
+                    </select>
+                </div>
+                 <div class="w-50">
+                <label for="englishLevel">English Level: </label>
+                    <select id="englishLevel" th:field="*{englishLevel}" name="englishLevel">
+                        <option value="All">All</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                 </div>
+            </div>
+
             <br>
-<!--             <input type="text" th:field="*{level}" name="price" class="form-control mb-2 w-50" placeholder="Niveau">-->
 
-<!--            <label for="duration">Durée en jours</label>-->
-
-<!--            <input type="number" th:field="*{duration}" id="duration" name="price" class="form-control mb-2 w-50" step="0.5">-->
-
-            <label for="duration">Durée: </label>
+            <label for="duration">Durée (en jours) </label>
             <select id="duration" th:field="*{duration}" name="duration">
-                <option value="1/2 jour">1/2 jour</option>
-                <option value="1 jour">1 jour</option>
-                <option value="2 jours">2 jours</option>
-                <option value="3 jours">3 jours</option>
+                <option value="1/2 jour">1/2</option>
+                <option value="1 jour">1</option>
+                <option value="2 jours">2 </option>
+                <option value="3 jours">3 </option>
             </select>
             <br>
             <br>

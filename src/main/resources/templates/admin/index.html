@@ -44,17 +44,33 @@
             </thead>
             <tbody>
             <tr th:each="tempArticle : ${articles}">
-                <td th:text="${tempArticle.id}"></td>
-                <td th:text="${tempArticle.title}"></td>
+                <td>
+                    <p th:text="${tempArticle.category}"></p>
+                    <hr>
+                    <p th:text="${tempArticle.englishCategory}"></p>
+                </td>
+                <td>
+                    <p th:text="${tempArticle.title}"></p>
+                    <hr>
+                    <p th:text="${tempArticle.englishTitle}"></p>
+                </td>
                 <td th:text="${tempArticle.date}"></td>
-                <td th:text="${tempArticle.content}"></td>
+                <td>
+                    <p th:text="${tempArticle.content}"></p>
+                    <hr>
+                    <p th:text="${tempArticle.englishContent}"></p>
+                </td>
                 <td>
 <!--                    <img th:src="@{/photos/article/} + ${tempArticle.id} + .jpg" alt="pic" width="170">-->
                     <img th:src="@{/images/} + ${tempArticle.id} + .jpg" alt="pic" width="170">
                 </td>
                 <td> <p th:text="${tempArticle.price}"> <span> €</span></p></td>
-                <td th:text="${tempArticle.level}"> </td>
-                <td th:text="${tempArticle.duration}"></td>
+                <td>
+                    <p th:text="${tempArticle.level}"></p>
+                    <hr>
+                    <p th:text="${tempArticle.englishLevel}"></p>
+                </td>
+                <td th:text="${tempArticle.duration}">  <span>Jours</span></td>
 
                 <td><a th:href="@{/admin/showFormForUpdate(articleId=${tempArticle.id})}" class="btn btn-primary">Modifier</a> </td>
                 <td><a th:href="@{/admin/delete(articleId=${tempArticle.id})}" class="btn btn-danger"

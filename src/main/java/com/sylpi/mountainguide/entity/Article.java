@@ -16,10 +16,16 @@ public class Article {
     private int id;
     @Column(name = "category")
     private String category;
+    @Column(name = "english_category")
+    private String englishCategory;
     @Column(name = "title")
     private String title;
+    @Column(name = "english_title")
+    private String englishTitle;
     @Column(name = "content")
     private String content;
+    @Column(name = "english_content")
+    private String englishContent;
     @Column(name = "picture")
     @Transient
     private MultipartFile picture;
@@ -30,6 +36,8 @@ public class Article {
     private int price;
     @Column(name = "level")
     private String level;
+    @Column(name = "english_level")
+    private String englishLevel;
     @Column(name = "Duration")
     private String duration;
 
@@ -44,15 +52,19 @@ public class Article {
         this.picture = picture;
     }
 
-    public Article(int id, String category, String title, String content, MultipartFile picture, LocalDate date, int price, String level, String duration) {
+    public Article(int id, String category, String englishCategory, String title, String englishTitle, String content, String englishContent, MultipartFile picture, LocalDate date, int price, String level, String englishLevel, String duration) {
         this.id = id;
         this.category = category;
+        this.englishCategory = englishCategory;
         this.title = title;
+        this.englishTitle = englishTitle;
         this.content = content;
+        this.englishContent = englishContent;
         this.picture = picture;
         this.date = date;
         this.price = price;
         this.level = level;
+        this.englishLevel = englishLevel;
         this.duration = duration;
     }
 
@@ -126,5 +138,37 @@ public class Article {
 
     public void setDuration(String duration) {
         this.duration = duration;
+    }
+
+    public String getEnglishTitle() {
+        return englishTitle;
+    }
+
+    public void setEnglishTitle(String englishTitle) {
+        this.englishTitle = englishTitle;
+    }
+
+    public String getEnglishContent() {
+        return englishContent;
+    }
+
+    public void setEnglishContent(String englishContent) {
+        this.englishContent = englishContent;
+    }
+
+    public String getEnglishCategory() {
+        return englishCategory;
+    }
+
+    public void setEnglishCategory(String englishCategory) {
+        this.englishCategory = englishCategory;
+    }
+
+    public String getEnglishLevel() {
+        return englishLevel;
+    }
+
+    public void setEnglishLevel(String englishLevel) {
+        this.englishLevel = englishLevel;
     }
 }

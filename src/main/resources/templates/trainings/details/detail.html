@@ -56,22 +56,54 @@
 
         <div class="col-12 mt-5 text-center">
             <hr class="m-5">
-            <h2 class="mb-3"> [ tous les détails de l'activité ici ]</h2>
+<!--            <h2 class="mb-3"> [ tous les détails de l'activité ici ]</h2>-->
 
+<!--            <div th:switch="__${#locale.language}__">-->
+<!--                <h4 th:case="en">[English]</h4>-->
+<!--                <h4 th:case="fr">[français]</h4>-->
+<!--            </div>-->
 
-            <div th:switch="__${#locale.language}__">
-                <h1 th:case="en">English</h1>
-                <h1 th:case="fr">français</h1>
+            <div class=""th:if="__${#locale.language}__=='fr'" >
+
+                <h2 th:text="${article.title}"></h2>
+                <h3>Catégorie: <span th:text="${article.category}"></span></h3>
+
+                <h3>Le <span th:text="${#temporals.format(article.date, 'dd-MM-yyyy')}"></span></h3>
+
+                <h3>Description: <span th:text="${article.content}"></span></h3>
+
+                <h3>Niveau: <span th:text="${article.level}"></span></h3>
+                <h3>Durée: <span th:text="${article.duration}"></span>Jour(s)</h3>
+
+                <h3>Prix/personne:
+                    <span th:text="${article.price}"></span> €
+                </h3>
+
+                <button class="btn btn-primary">Réserver !</button>
+
             </div>
 
-            <h3>Le <span th:text="${#temporals.format(article.date, 'dd-MM-yyyy')}"></span></h3>
-            <h3>Description: <span th:text="${article.content}"></span></h3>
-            <h3>Catégorie: <span th:text="${article.category}"></span></h3>
-            <h3>Niveau: <span th:text="${article.level}"></span></h3>
-            <h3>Durée: <span th:text="${article.duration}"></span></h3>
-            <h3>Prix/personne: <span th:text="${article.price}"></span> €</h3>
-            <h2 class="display-4"> ... </h2>
-        </div>
+            <div class=""th:if="__${#locale.language}__=='en'" >
+
+                <h2 th:text="${article.englishTitle}"></h2>
+                <h3>Category: <span th:text="${article.englishCategory}"></span></h3>
+
+                <h3>Date: <span th:text="${#temporals.format(article.date, 'dd-MM-yyyy')}"></span></h3>
+
+                <h3>Description: <span th:text="${article.englishContent}"></span></h3>
+
+                <h3>Level: <span th:text="${article.englishLevel}"></span></h3>
+                <h3>Duration: <span th:text="${article.duration}"> Day(s)</span></h3>
+
+                <h3>Price/person:
+                    <span th:text="${article.price}"></span> €
+                </h3>
+
+                <button class="btn btn-primary">Reservation !</button>
+            </div>
+
+            </div>
+
 
     </div>
 
