@@ -49,13 +49,6 @@ nav ul {
     justify-content: space-around;
 }
 
-/*.traduction{
-    position:fixed;
-    top:60px;
-    right:20px;
-    z-index:99;
-}*/
-
 /* HOME PAGE */
 .home-body{
     background: url("../img/back2.jpg") no-repeat center;
@@ -119,8 +112,8 @@ nav ul li .active{
 
 /*anchor */
 #next-activities{
-    margin-top: 20%;
-    margin-bottom:-200px;
+    margin-top: 24%;
+    padding: 20px;
 }
 
 /* list of activities to come*/
@@ -129,54 +122,48 @@ nav ul li .active{
     padding: 30px 60px;
     background-color: rgba(70,130,180, .65);
     margin:auto;
-    margin-top: 25%;
 }
-.next-activities article{
-   display:flex;
-   flex-direction: column;
-   align-items: center;
-   border-bottom: solid 1px transparent;
+
+.next-activities .card{
+    background-color: transparent !important;
+    border: none;
 }
-.next-activities article>p{
-     width: 340px;
+/*.next-activities .card .card-link{
+    transition: all .6s ease;
 }
-.next-activities article>h5{
+
+.next-activities .card .card-link:hover{
+    text-decoration:none;
+    transform: scale(1.04);
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, .4), -3px -3px 3px rgba(255, 255, 255, .4);
+}*/
+.next-activities .card .arrowhead{
+    transform: rotate(45deg);
+    font-size: 1rem;
+}
+.next-activities .card h5{
     font-style: italic;
 }
-.next-activities article .details-links{
-    margin-top: 30px;
-}
-.next-activities article .details-links a{
-    background-color: #333;
-    color: #fff;
-    width: 200px;
-    padding: 8px;
-    margin: 8px auto;
-}
+
  .event-links{
     width: 74%;
     margin:auto;
  }
 .event-links>a{
-    background-color: #fff;
     padding: 8px 14px;
     width:200px;
-    text-align: center;
 }
 
-/*resize pics*/
+/*add sep line on mobile*/
 @media screen and (max-width: 1084px)
 {
-    .next-activities article{
-        border-bottom: solid 1px #ccc;
+    .next-activities .card{
+        border-bottom: solid 1px #ccc !important;
+        margin-top:30px;
+        padding-bottom:20px;
     }
-}
-@media screen and (max-width: 425px)
-{
-    .next-activities article img{
-        width: 260px;
-        height: 180px;
-        margin:auto;
+    .event-links-sep{
+        display:none;
     }
 }
 
