@@ -44,41 +44,4 @@ public class TrainingsController {
     }
 
 
-    // all these should be deleted in the end
-//    @GetMapping("alpinisme")
-//    public String alpi(Model model){
-//        List<Article> allArticles = articleService.findAll();
-//        model.addAttribute("articles", allArticles);
-//        return "trainings/details/alpinisme";
-//    }
-//
-//    @GetMapping("escalade")
-//    public String escalade(Model model){
-//        List<Article> allArticles = articleService.findAll();
-//        model.addAttribute("articles", allArticles);
-//        return "trainings/details/escalade";
-//    }
-//
-//    @GetMapping("hors-piste")
-//    public String horspiste(Model model){
-////        List<Article> allArticles = articleService.findAll();
-////        model.addAttribute("articles", allArticles);
-//        return "trainings/details/horspiste";
-//    }
-//
-//    @GetMapping("ski-rando")
-//    public String rando(Model model){
-////        List<Article> allArticles = articleService.findAll();
-////        model.addAttribute("articles", allArticles);
-//        return "trainings/details/skirando";
-//    }
-//
-//
-//    @GetMapping("trek")
-//    public String trek(Model model){
-////        List<Article> allArticles = articleService.findAll();
-////        model.addAttribute("articles", allArticles);
-//        return "trainings/details/trek";
-//    }
-
 }

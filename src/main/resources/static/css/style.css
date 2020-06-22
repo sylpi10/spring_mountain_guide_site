@@ -107,7 +107,11 @@ nav ul li .active{
     background-color: #fff;
     border-radius: 20px;
 }
-
+@media screen and (max-width: 1000px){
+    .home-description{
+        display:none;
+    }
+}
 /* ACTIVITIES LIST on HOME PAGE*/
 
 /*anchor */
@@ -118,7 +122,7 @@ nav ul li .active{
 
 /* list of activities to come*/
 .next-activities{
-    width: 74%;
+    /*width: 74%;*/
     padding: 30px 60px;
     background-color: rgba(70,130,180, .65);
     margin:auto;
@@ -152,6 +156,12 @@ nav ul li .active{
 .event-links>a{
     padding: 8px 14px;
     width:200px;
+}
+/*remove padding < 400px*/
+@media screen and (max-width: 400px){
+    .next-activities{
+        padding: 30px 20px;
+    }
 }
 
 /*add sep line on mobile*/

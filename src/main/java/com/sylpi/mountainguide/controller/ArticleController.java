@@ -144,16 +144,16 @@ public class ArticleController {
 //        return theArticle;
 //    }
 
-    @DeleteMapping("/{id}")
-    public String deleteEmployee(@PathVariable int id){
-        Article tempArticle = articleService.findById(id);
-
-        // throw exception if null
-        if (tempArticle == null){
-            throw new RuntimeException("no result");
-        }
-        articleService.deleteById(id);
-        return "Deleted article with id " + id;
-    }
+//    @DeleteMapping("/{id}")
+//    public String deleteEmployee(@PathVariable int id){
+//        Article tempArticle = articleService.findById(id);
+//
+//        // throw exception if null
+//        if (tempArticle == null){
+//            throw new RuntimeException("no result");
+//        }
+//        articleService.deleteById(id);
+//        return "Deleted article with id " + id;
+//    }
 
 }
