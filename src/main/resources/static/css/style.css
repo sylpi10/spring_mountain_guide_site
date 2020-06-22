@@ -100,6 +100,7 @@ nav ul li .active{
     font-size: 1.6rem;
     color:#fff;
 }
+
 .next-activities-link{
     width: 200px;
     margin:auto;
@@ -107,7 +108,7 @@ nav ul li .active{
     background-color: #fff;
     border-radius: 20px;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 760px){
     .home-description{
         display:none;
     }
@@ -128,6 +129,7 @@ nav ul li .active{
     margin:auto;
 }
 
+
 .next-activities .card{
     background-color: transparent !important;
     border: none;
@@ -135,6 +137,7 @@ nav ul li .active{
 /*.next-activities .card .card-link{
     transition: all .6s ease;
 }
+
 
 .next-activities .card .card-link:hover{
     text-decoration:none;
@@ -157,10 +160,13 @@ nav ul li .active{
     padding: 8px 14px;
     width:200px;
 }
-/*remove padding < 400px*/
-@media screen and (max-width: 400px){
+/*remove padding, resize h1 < 400px*/
+@media screen and (max-width: 500px){
     .next-activities{
         padding: 30px 20px;
+    }
+    .home-container>h1{
+        font-size: 3rem;
     }
 }
 
