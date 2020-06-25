@@ -11,6 +11,8 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 
@@ -61,10 +63,12 @@ public class ArticleController {
     @GetMapping("/showFormForUpdate")
     public String showFormForUpdate(@RequestParam("articleId") int theId, Model theModel){
 
+
         // get the article from service
-        Article theArticle = articleService.findById(theId);
+        Article article = articleService.findById(theId);
+
         // set article as a model to pre-populate the form
-        theModel.addAttribute("article", theArticle);
+        theModel.addAttribute("article", article);
 
         return "admin/article-form";
     }
@@ -92,19 +96,21 @@ public class ArticleController {
         articleService.save(theArticle);
 
         MultipartFile articleImage = theArticle.getPicture();
-        try {
-            byte[] bytes = articleImage.getBytes();
-            String imageName = theArticle.getId()+".jpg";
-            BufferedOutputStream stream =
-                    new BufferedOutputStream(new FileOutputStream(
-//                            new File("src/main/resources/static/photos/article/"+imageName)));
-                            new File("images/"+imageName)));
-            stream.write(bytes);
-            stream.close();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+        if(!articleImage.isEmpty()) {
 
+            try {
+                byte[] bytes = articleImage.getBytes();
+                String imageName = theArticle.getId() + ".jpg";
+                BufferedOutputStream stream =
+                        new BufferedOutputStream(new FileOutputStream(
+//                            new File("src/main/resources/static/photos/article/"+imageName)));
+                                new File("images/" + imageName)));
+                stream.write(bytes);
+                stream.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
         // redirect to list
         return "redirect:/admin/list";
@@ -130,30 +136,5 @@ public class ArticleController {
     }
 
 
-//    @PostMapping("/")
-//    public Article save(@RequestBody Article theArticle) {
-//        theArticle.setId(0);
-//
-//        articleService.save(theArticle);
-//        return theArticle;
-//    }
-//
-//    @PutMapping("/")
-//    public Article updateArticle(@RequestBody Article theArticle){
-//        articleService.save(theArticle);
-//        return theArticle;
-//    }
-
-//    @DeleteMapping("/{id}")
-//    public String deleteEmployee(@PathVariable int id){
-//        Article tempArticle = articleService.findById(id);
-//
-//        // throw exception if null
-//        if (tempArticle == null){
-//            throw new RuntimeException("no result");
-//        }
-//        articleService.deleteById(id);
-//        return "Deleted article with id " + id;
-//    }
 
 }
