@@ -24,7 +24,7 @@
               th:object="${article}" method="post", enctype="multipart/form-data">
 
 <!--            add hidden form field to handle update-->
-            <input type="hidden" th:field="*{id}">
+            <input type="hidden" th:field="*{id}" >
 
 <!--            <input type="text" th:field="*{category}" class="form-control mb-2 w-50" placeholder="Categorie">-->
             <div class="row">
@@ -67,7 +67,7 @@
                 <textarea type="text" th:field="*{englishContent}" class="form-control mb-2 w-50" placeholder="English Description"></textarea>
             </div>
 
-            <input type="file" th:field="*{picture}" name="files" class="form-control mb-2 w-50" multiple>
+            <input type="file" th:field="*{picture}" name="files" class="form-control mb-2 w-50" multiple >
 
             <label for="price">Prix</label>
             <input type="number" th:field="*{price}" id="price" name="price" class="form-control mb-2 w-50" placeholder="Prix">
